@@ -1,29 +1,22 @@
 # README #
 
-Este es una WebApp esqueleto para comenzar rápidamente con el desarrollo e implementación de funcionalidades.
+Este es un esqueleto de WebApp para comenzar rápidamente con el desarrollo e implementación de funcionalidades.
 
-### What is this repository for? ###
+### Contiene lo siguiente: ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+FromEnd
+1.-AdminLTE 2
 
+Backend
+1.- Slim Framewor 3
+2-. Manejador de plantillas twig-view
+3.- slim/flash
+4.- Monolog - Manejador de registros/Logs
+5.- Medoo Manejador de base de datos
+6.- MySQL
+
+Utiliza una base de datos con una tabla de usuarios para la autentican.
+
+Funciones a futuro:
+1.- Agregar manejo de perfiles por usuarios.
 ### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
