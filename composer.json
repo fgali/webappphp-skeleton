@@ -1,6 +1,8 @@
 {
     "name": "WebAppPHP SKELETON",
     "description": "skeleton application for rapid development",
+    "version": "1.0.0-dev", 
+    "type": "project",
     "keywords": ["microframework", "rest", "router", "psr7"],
     "homepage": "http://desarrollosgali.com.ve/",
     "license": "MIT",
