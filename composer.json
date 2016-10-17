@@ -1,0 +1,27 @@
+{
+    "name": "WebAppPHP SKELETON",
+    "description": "skeleton application for rapid development",
+    "keywords": ["microframework", "rest", "router", "psr7"],
+    "homepage": "http://desarrollosgali.com.ve/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Francisco Gali",
+            "email": "f.gali.18@gmail.com",
+            "homepage": "http://desarrollosgali.com.ve/"
+        }
+    ],
+    "require": {
+        "slim/slim": "^3.0",
+        "slim/twig-view": "^2.0",
+        "slim/flash": "^0.1.0",
+        "monolog/monolog": "^1.13",
+        "slim/php-view": "^2.2",
+        "catfan/Medoo": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src"
+        }
+    }
+}

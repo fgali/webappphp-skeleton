@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>RIC | Log in</title>
+  
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+	<link rel="icon" type="image/png" sizes="16x16" href="dist/img/icon.png">
+
+    <link rel="stylesheet" href="plugins/Bootstrap-3.3.6/css/bootstrap.min.css">
+    
+    <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+	
+    <script src="plugins/Bootstrap-3.3.6/js/bootstrap.min.js"></script>	
+
+	<link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+
+    <link href="dist/css/login.css" rel="stylesheet" />
+
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+    <script>
+		$(document).ready(function () {
+
+		});
+    </script>
+
+</head>
+<body class="hold-transition login-page">
+	
+    <div class="login-box">
+            <image src="../public/dist/img/logo.png" style="width:570px;">	
+        <div class="login-box-body">
+            <p class="login-box-msg">Entrar al sistema</p>
+            
+            <form id="Login" method="post" action="./login" role="form">
+				<div class="form-group">
+					<div class="input-group">
+					  <span class="input-group-addon" id="basic-addon1">
+						<span class="glyphicon glyphicon-user"></span>
+					  </span>
+					  <input type="text" id="usuario" name="usuario" class="form-control" placeholder="Usuario" aria-describedby="basic-addon1" value="{{ usuario }}">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+					  <span class="input-group-addon" id="basic-addon2">
+						<span class="glyphicon glyphicon-lock"></span>
+					  </span>
+					  <input type="password" id="contrasena" name="contrasena" class="form-control" placeholder="Contraseña" aria-describedby="basic-addon2">
+					</div>
+				</div>
+
+                <!--<div class="form-group has-feedback">
+                    <input type="text" id="usuario" name="usuario" class="form-control" placeholder="Usuario">
+                    <span class="glyphicon glyphicon-user form-control-feedback "></span>
+                </div>
+                <div class="form-group has-feedback">
+					<input type="password" id="contrasena" name="contrasena" class="form-control" placeholder="Contraseña">
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>-->
+                <div class="row">
+                    
+                    <div class="col-xs-12">
+                        <button type="submit" class="btn btn-primary btn-block btn-flat" style="    background-color: #95C11F; border-color: #95C11F;">Login</button>
+                    </div>
+                </div>
+				<div class="row">
+                    
+                    <div class="col-xs-12">
+                        <div class="" style="text-align: center;height: 50px; padding: 8px; color: red;">
+                            {{ errorLogIn }}
+							
+						</div>
+                    </div>
+                </div>
+                
+            </form>
+            
+            <p><span style="font-size:18px;">¿Olvidaste tu contraseña?</span></br>
+			Click <a href="#" style="font-weight:bold;">aqui</a> para recuperarla.</p>
+            
+        </div>
+    </div>
+    <footer style="margin-top: 20px; font-size: 20px;">
+		GLOSS 2016. Todos los derechos reservados.
+	</footer>
+
+   
+
+</body>
+</html>
