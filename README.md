@@ -5,9 +5,11 @@ Este es un esqueleto de WebApp para comenzar rápidamente con el desarrollo e im
 ### Contiene lo siguiente: ###
 
 FromEnd
+
 1.-AdminLTE 2
 
 Backend
+
 1.- Slim Framewor 3
 2-. Manejador de plantillas twig-view
 3.- slim/flash
