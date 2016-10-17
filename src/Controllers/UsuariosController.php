@@ -26,9 +26,7 @@ class UsuariosController extends BaseController {
 	}
 
 	public function guardar($request, $response, $args) {
-		$list = 'Guardar Usuario';
-		$response->withHeader('Content-Type', 'application/json');
-        $response->write(json_encode($list));
+		$list = 'Guardar Usuario';		
         return $response->withJson([$list], 201, $encodingOptions);
 	}
 
