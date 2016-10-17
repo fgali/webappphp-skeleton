@@ -17,10 +17,10 @@ $app->add(function ($request, $response, callable $next) {
     $uri = $request->getUri();
     $path = $uri->getPath();
     
-    /*if ($path != 'login' && isset($_SESSION['logged']) == false) {
+    if ($path != 'login' && isset($_SESSION['logged']) == false) {
         $URL = (string)$uri."ric/public/login";
         return $response->withRedirect($this->router->pathFor('login'), 301);
-    }*/
+    }
     
     if ($path == 'login' && isset($_SESSION['logged']) == true) {
         $URL = (string)$uri->getBaseUrl();
