@@ -1,17 +1,6 @@
 <?php
 // Application middleware
 
-//
-$app->add(function($request, $response, $next) {
-    /*$uri = $request->getUri();
-    $api = 'no';
-    if(strpos($uri->getPath(), 'api') >= 0){
-        $_SESSION["API"] = true;
-    }*/
-    //var_dump($_SESSION["API"]);
-    return $next($request, $response);
-});
-
 //Validar Session
 $app->add(function ($request, $response, callable $next) {
     $uri = $request->getUri();
@@ -44,4 +33,25 @@ $app->add(function ($request, $response, callable $next) {
     $response = $next($newreq,$response);
 
     return $response;
+});
+
+//Validar duracion de la sesion y regenerar los id para evitar ataques session fixation:
+$app->add(function($request, $response, $next) {
+    $SESSION_TIMEOUT = 1200;
+    if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > SESSION_TIMEOUT)) {
+        // last request was more than 30 minutes ago
+        session_unset();     // unset $_SESSION variable for the run-time 
+        session_destroy();   // destroy session data in storage
+    }
+    $_SESSION['LAST_ACTIVITY'] = time();
+
+    if (!isset($_SESSION['CREATED'])) {
+        $_SESSION['CREATED'] = time();
+    } else if (time() - $_SESSION['CREATED'] > SESSION_TIMEOUT) {
+        // session started more than 30 minutes ago
+        session_regenerate_id(true);    // change session ID for the current session and invalidate old session ID
+        $_SESSION['CREATED'] = time();  // update creation time
+    }
+    
+    return $next($request, $response);
 });
