@@ -36,6 +36,7 @@ class AcountController extends BaseController {
 			return $this->view->render($response, 'login.twig', $args);
 		}else{
 			$_SESSION['logged'] = true;
+			$SESSION_TIMEOUT = 1200;
 			$_SESSION['usuario'] = $rows[0];
 
 			return $response->withRedirect($this->router->pathFor('home'), 301);
